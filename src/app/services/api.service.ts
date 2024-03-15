@@ -9,7 +9,7 @@ import { Weather } from '../models/weather';
 })
 export class ApiService {
   private readonly crudEndpoint: string =
-    'https://crudcrud.com/api/3b4163e66c964517bfb16484091b998d';
+    'https://crudcrud.com/api/c8aa7b3a9f584d42b5167404ace7b35e';
   private readonly resource: string = '/cities';
 
   constructor(private http: HttpClient) {}
