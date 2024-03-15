@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: "."
+      dockerfile: Dockerfile
+    container_name: angular
+    ports:
+      - 4200:4200
+    volumes:
+      - ./angular:/project
+      - /project/node_modules
