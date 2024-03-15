@@ -1,0 +1,20 @@
+{
+  "language": "Language",
+  "city": "City",
+  "temperature": "Temperature",
+  "rainingStatus": "Raining Status",
+  "date": "Date",
+  "networkPower": "Network power",
+  "altitude": "Altitude",
+  "registries": "Registries",
+  "lastUpdated": "Last updated",
+  "submit": "Submit",
+  "cityError": "Please enter a city from a country",
+  "temperatureError": "Please enter a temperature",
+  "rainingStatusError": "Please enter the raining percentage",
+  "rainingStatusErrorMinMax": "Please enter a value between 0 and 100",
+  "dateError": "Please enter a date",
+  "networkPowerError": "Please enter the network power",
+  "networkPowerErrorMinMax": "Please enter a value between 1 and 5",
+  "altitudeError": "Please enter an altitude"
+}

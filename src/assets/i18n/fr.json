@@ -1,0 +1,12 @@
+{
+  "language": "Langue",
+  "city": "Ville",
+  "temperature": "Température",
+  "rainingStatus": "Statut de pluie",
+  "date": "Date",
+  "networkPower": "Puissance réseau",
+  "altitude": "Altitude",
+  "registries": "Registres",
+  "lastUpdated": "Dernière mise à jour",
+  "submit": "Soumettre"
+}
