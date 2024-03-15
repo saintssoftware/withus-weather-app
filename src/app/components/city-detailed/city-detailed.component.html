@@ -1,0 +1,48 @@
+<h1>{{ city?.name }}</h1>
+<table mat-table [dataSource]="city?.weathers ?? []">
+  <!-- Position Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>{{ "date" | translate }}</th>
+    <td mat-cell *matCellDef="let element">
+      {{ getDateLocaleString(element.date) }}
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="temperature">
+    <th mat-header-cell *matHeaderCellDef>{{ "temperature" | translate }}</th>
+    <td mat-cell *matCellDef="let element">{{ element.temperature }}º</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="rainingStatus">
+    <th mat-header-cell *matHeaderCellDef>
+      {{ "rainingStatus" | translate }}
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.rainingStatus }}%</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="networkPower">
+    <th mat-header-cell *matHeaderCellDef>
+      {{ "networkPower" | translate }}
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.networkPower }}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="altitude">
+    <th mat-header-cell *matHeaderCellDef>{{ "altitude" | translate }}</th>
+    <td mat-cell *matCellDef="let element">{{ element.altitude }}m</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    [ngClass]="{
+      low: row.networkPower == 2,
+      'very-low': row.networkPower == 1
+    }"
+  ></tr>
+</table>

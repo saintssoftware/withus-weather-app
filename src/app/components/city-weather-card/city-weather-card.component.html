@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ city?.name }}</mat-card-title>
+    <mat-card-subtitle
+      >{{ "lastUpdated" | translate }}:
+      {{ getDateLocaleString(lastestWeather?.date) }}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <span
+      >{{ "temperature" | translate }}: {{ lastestWeather?.temperature }}º</span
+    >
+    <span
+      >{{ "rainingStatus" | translate }}:
+      {{ lastestWeather?.rainingStatus }}%</span
+    >
+    <span
+      >{{ "networkPower" | translate }}:
+      {{ lastestWeather?.networkPower }}</span
+    >
+    <span>{{ "altitude" | translate }}: {{ lastestWeather?.altitude }}m</span>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="selectCity()">
+      <mat-icon>table_chart</mat-icon>{{ "registries" | translate }}
+    </button>
+  </mat-card-actions>
+</mat-card>

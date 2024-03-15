@@ -1,0 +1,17 @@
+.container {
+  height: 80%;
+  display: flex;
+}
+
+.sub-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.mat-mdc-form-field {
+  min-width: 300px;
+}
